@@ -1,4 +1,4 @@
-import { i18n } from '../src';
+import * as i18n from '../src';
 const languageJSON = {
     "values": {
         "Yes": "Yebo",
@@ -42,7 +42,7 @@ const options = {
 }
 
 const key = '%{name}, they are %n y/o';
-const translate = new i18n(languageJSON);
+const translate = new i18n.i18n(languageJSON);
 
 describe('Dictionary with context', () => {
     test(`is ${key} translated with options ${JSON.stringify(options)}`, () => {
